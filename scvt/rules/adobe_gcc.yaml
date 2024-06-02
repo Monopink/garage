@@ -1,0 +1,10 @@
+# NAME: Adobe GCC
+payload:
+  - DOMAIN,crs.cr.adobe.com
+  - DOMAIN,www.photoshop.com
+  - DOMAIN,cc-cdn.adobe.com
+  - DOMAIN,photos.adobe.io
+  - DOMAIN,cc-api-data.adobe.io
+  - DOMAIN,lcs-cops.adobe.io
+  - DOMAIN,cai-splunk-proxy.adobe.io
+  - DOMAIN,butler.adobe.com
