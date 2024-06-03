@@ -1,0 +1,6 @@
+# NAME: One-click login
+payload:
+  - DOMAIN-SUFFIX,tiktokglobalshop.com
+  - DOMAIN-SUFFIX,shop.tiktok.com
+  - DOMAIN-SUFFIX,seller-us-accounts.tiktok.com
+  - DOMAIN-SUFFIX,seller-us.tiktok.com
