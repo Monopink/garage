@@ -1,0 +1,20 @@
+# NAME: One-click login
+payload:
+# 移动
+  - DOMAIN,config.cmpassport.com
+  - DOMAIN,www.cmpassport.com
+  - DOMAIN-SUFFIX,cmpassport.com,rejct
+
+# 联通
+  - DOMAIN,opencloud.wostore.cn
+  - DOMAIN,hmrz.wo.cn
+  - DOMAIN-SUFFIX,hmrz.wo.cn
+  - DOMAIN-SUFFIX,wosotre.cn
+
+# 电信
+  - DOMAIN,id6.me
+  - DOMAIN-SUFFIX,e.189.cn
+
+# 阿里
+#   - DOMAIN-SUFFIX,dypnsapi.aliyuncs.com
+#   - DOMAIN-SUFFIX,dypns.alysm.cn
