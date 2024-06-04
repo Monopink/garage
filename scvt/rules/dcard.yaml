@@ -1,3 +1,2 @@
 # NAME: Dcard
-payload:
-  - DOMAIN-SUFFIX,host-suffix
+DOMAIN-SUFFIX,host-suffix
