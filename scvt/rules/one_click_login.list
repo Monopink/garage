@@ -2,7 +2,7 @@
 # 移动
 DOMAIN,config.cmpassport.com
 DOMAIN,www.cmpassport.com
-DOMAIN-SUFFIX,cmpassport.com,rejct
+DOMAIN-SUFFIX,cmpassport.com
 # 联通
 DOMAIN,opencloud.wostore.cn
 DOMAIN,hmrz.wo.cn
