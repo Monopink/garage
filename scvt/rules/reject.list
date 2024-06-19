@@ -1,4 +1,6 @@
-# NAME: Adobe GCC
+# NAME: Reject
+
+# Adobe GCC
 DOMAIN,crs.cr.adobe.com
 DOMAIN,www.photoshop.com
 DOMAIN,cc-cdn.adobe.com
