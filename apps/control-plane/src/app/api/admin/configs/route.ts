@@ -14,6 +14,7 @@ export async function GET(request: Request) {
     return auth.response;
   }
   const svc = getSubscriptionService();
+  // API path is exposed as "configs", while the service/entity name remains Template.
   const items = await svc.listTemplates();
   return NextResponse.json({ items });
 }

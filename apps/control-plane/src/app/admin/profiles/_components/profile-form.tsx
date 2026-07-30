@@ -44,7 +44,7 @@ const schema = z
     name: z.string().min(1, "name is required"),
     enabled: z.boolean(),
     target: z.enum(SUPPORTED_TARGETS),
-    templateId: z.string().min(1, "template is required"),
+    templateId: z.string().min(1, "config is required"),
     sourceIds: z.array(z.string()),
     infoSourceIds: z.array(z.string()),
 
@@ -305,6 +305,7 @@ export function ProfileForm({
 }: {
   mode: "create" | "edit";
   initial?: Profile;
+  // UI copy refers to configs, but profiles still persist a templateId internally.
   templates: Template[];
   sources: Source[];
   submitting: boolean;
@@ -456,7 +457,7 @@ export function ProfileForm({
           </Select>
         </div>
         <div>
-          <Label htmlFor="templateId">Template</Label>
+          <Label htmlFor="templateId">Config</Label>
           <Select id="templateId" {...form.register("templateId")}>
             {templateOptions.map((item) => (
               <option key={item.id} value={item.id}>

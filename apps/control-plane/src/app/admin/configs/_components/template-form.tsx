@@ -79,8 +79,8 @@ export function TemplateForm({
           {submitting
             ? "Saving..."
             : mode === "create"
-              ? "Create Template"
-              : "Update Template"}
+              ? "Create Config"
+              : "Update Config"}
         </Button>
       </div>
     </form>

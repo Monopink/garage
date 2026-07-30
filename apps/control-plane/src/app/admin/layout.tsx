@@ -8,7 +8,7 @@ const NAV_ITEMS = [
   { href: "/admin/aliases", label: "Aliases" },
   { href: "/admin/profiles", label: "Profiles" },
   { href: "/admin/sources", label: "Sources" },
-  { href: "/admin/templates", label: "Templates" },
+  { href: "/admin/configs", label: "Configs" },
   { href: "/admin/logs/pulls", label: "Pull Logs" },
 ];
 

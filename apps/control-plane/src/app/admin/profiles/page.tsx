@@ -71,7 +71,7 @@ export default function ProfilesPage() {
     <div className="space-y-4">
       <PageTitle
         title="Profiles"
-        description="Manage profile options, target format, templates, and sources."
+        description="Manage profile options, target format, configs, and sources."
       />
 
       <InlineError message={error} />
@@ -92,7 +92,7 @@ export default function ProfilesPage() {
                 <TR>
                   <TH>Name</TH>
                   <TH>Target</TH>
-                  <TH>Template</TH>
+                  <TH>Config</TH>
                   <TH>Sources</TH>
                   <TH>Enabled</TH>
                   <TH>Updated At</TH>

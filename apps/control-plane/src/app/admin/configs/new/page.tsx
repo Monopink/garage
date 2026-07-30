@@ -8,7 +8,7 @@ import { InlineError, LinkButton, PageTitle } from "@/app/admin/_components/comm
 import {
   TemplateForm,
   type TemplateFormValue,
-} from "@/app/admin/templates/_components/template-form";
+} from "@/app/admin/configs/_components/template-form";
 
 export default function NewTemplatePage() {
   const router = useRouter();
@@ -24,7 +24,7 @@ export default function NewTemplatePage() {
         ref: value.ref.trim(),
         enabled: value.enabled,
       });
-      router.replace("/admin/templates");
+      router.replace("/admin/configs");
     } catch (err) {
       setError(formatApiError(err));
     } finally {
@@ -34,12 +34,12 @@ export default function NewTemplatePage() {
 
   return (
     <div className="space-y-4">
-      <PageTitle title="New Template" description="Create a template metadata entry." />
+      <PageTitle title="New Config" description="Create a config metadata entry." />
       <InlineError message={error} />
       <Card>
         <CardHeader className="flex flex-row items-center justify-between">
-          <CardTitle>Create Template</CardTitle>
-          <LinkButton href="/admin/templates" variant="outline">
+          <CardTitle>Create Config</CardTitle>
+          <LinkButton href="/admin/configs" variant="outline">
             Back
           </LinkButton>
         </CardHeader>

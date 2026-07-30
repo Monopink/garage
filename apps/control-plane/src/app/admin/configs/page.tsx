@@ -42,7 +42,7 @@ export default function TemplatesPage() {
   }, []);
 
   async function onDelete(id: string) {
-    if (!window.confirm(`Delete template ${id}?`)) {
+    if (!window.confirm(`Delete config ${id}?`)) {
       return;
     }
     try {
@@ -61,15 +61,15 @@ export default function TemplatesPage() {
 
   return (
     <div className="space-y-4">
-      <PageTitle title="Templates" description="Manage template metadata entries." />
+      <PageTitle title="Configs" description="Manage config metadata entries." />
       <InlineError message={error} />
       <InlineSuccess message={success} />
 
       <Card>
         <CardHeader className="flex flex-row items-center justify-between">
-          <CardTitle>Template List</CardTitle>
-          <LinkButton href="/admin/templates/new">
-            New Template
+          <CardTitle>Config List</CardTitle>
+          <LinkButton href="/admin/configs/new">
+            New Config
           </LinkButton>
         </CardHeader>
         <CardContent>
@@ -98,7 +98,7 @@ export default function TemplatesPage() {
                     <TD>
                       <div className="flex gap-2">
                         <LinkButton
-                          href={`/admin/templates/${encodeURIComponent(item.id)}/edit`}
+                          href={`/admin/configs/${encodeURIComponent(item.id)}/edit`}
                           variant="outline"
                         >
                           Edit

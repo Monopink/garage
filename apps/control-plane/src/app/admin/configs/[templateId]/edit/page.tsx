@@ -18,7 +18,7 @@ import {
 import {
   TemplateForm,
   type TemplateFormValue,
-} from "@/app/admin/templates/_components/template-form";
+} from "@/app/admin/configs/_components/template-form";
 
 export default function EditTemplatePage() {
   const router = useRouter();
@@ -53,7 +53,7 @@ export default function EditTemplatePage() {
       });
       setTemplate(updated);
       setSuccess("updated");
-      router.replace(`/admin/templates/${encodeURIComponent(updated.id)}/edit`);
+      router.replace(`/admin/configs/${encodeURIComponent(updated.id)}/edit`);
     } catch (err) {
       setError(formatApiError(err));
     } finally {
@@ -63,7 +63,7 @@ export default function EditTemplatePage() {
 
   return (
     <div className="space-y-4">
-      <PageTitle title="Edit Template" description="Update a template metadata entry." />
+      <PageTitle title="Edit Config" description="Update a config metadata entry." />
       <InlineError message={error} />
       <InlineSuccess message={success} />
       <Card>
@@ -78,7 +78,7 @@ export default function EditTemplatePage() {
               "Loading..."
             )}
           </CardTitle>
-          <LinkButton href="/admin/templates" variant="outline">
+          <LinkButton href="/admin/configs" variant="outline">
             Back
           </LinkButton>
         </CardHeader>

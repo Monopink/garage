@@ -114,18 +114,19 @@ export async function removeSource(sourceId: string): Promise<void> {
 }
 
 export async function listTemplates(): Promise<Template[]> {
-  const body = await requestJson<{ items: Template[] }>("/api/admin/templates");
+  // UI routes use "configs", but the underlying model remains Template for now.
+  const body = await requestJson<{ items: Template[] }>("/api/admin/configs");
   return body.items;
 }
 
 export async function getTemplate(templateId: string): Promise<Template> {
-  return requestJson(`/api/admin/templates/${encodeURIComponent(templateId)}`);
+  return requestJson(`/api/admin/configs/${encodeURIComponent(templateId)}`);
 }
 
 export async function createTemplate(
   payload: Omit<Template, "id" | "updatedAt">
 ): Promise<Template> {
-  return requestJson("/api/admin/templates", {
+  return requestJson("/api/admin/configs", {
     method: "POST",
     body: JSON.stringify(payload),
   });
@@ -135,14 +136,14 @@ export async function updateTemplate(
   templateId: string,
   payload: Partial<Omit<Template, "id" | "updatedAt">>
 ): Promise<Template> {
-  return requestJson(`/api/admin/templates/${encodeURIComponent(templateId)}`, {
+  return requestJson(`/api/admin/configs/${encodeURIComponent(templateId)}`, {
     method: "PUT",
     body: JSON.stringify(payload),
   });
 }
 
 export async function removeTemplate(templateId: string): Promise<void> {
-  await requestJson(`/api/admin/templates/${encodeURIComponent(templateId)}`, {
+  await requestJson(`/api/admin/configs/${encodeURIComponent(templateId)}`, {
     method: "DELETE",
   });
 }
