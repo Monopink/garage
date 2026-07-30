@@ -9,6 +9,7 @@ on:
       - "workers/converter/**"
       - "apps/control-plane/**"
       - "src/**"
+      - "base/**"
       - "Cargo.toml"
       - "Cargo.lock"
   workflow_dispatch:
